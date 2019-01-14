@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Joke.css';
 
 class Joke extends Component {
   static defaultProps = {
@@ -20,9 +21,9 @@ class Joke extends Component {
     let { joke, score } = this.props.jokeDetails;
     return (
       <div>
-        {`${joke}`}
+        <span>{joke}</span>
         <i onClick={this.handleUpVoteClick} className="far fa-thumbs-up" />
-        {score}
+        <span className="score">{score}</span>
         <i onClick={this.handleDownVoteClick} className="far fa-thumbs-down" />
       </div>
     );
