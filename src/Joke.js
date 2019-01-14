@@ -20,14 +20,10 @@ class Joke extends Component {
     let { joke, score } = this.props.jokeDetails;
     return (
       <div>
-        <span>
-          {`${joke} ${score}`}
-          <i onClick={this.handleUpVoteClick} className="far fa-thumbs-up" />
-          <i
-            onClick={this.handleDownVoteClick}
-            className="far fa-thumbs-down"
-          />
-        </span>
+        {`${joke}`}
+        <i onClick={this.handleUpVoteClick} className="far fa-thumbs-up" />
+        {score}
+        <i onClick={this.handleDownVoteClick} className="far fa-thumbs-down" />
       </div>
     );
   }
