@@ -27,7 +27,7 @@ class JokeList extends Component {
     let randomPage = Math.ceil(Math.random() * 53);
     let response = await axios.get(`https://icanhazdadjoke.com/search`, {
       headers: { Accept: 'application/json' },
-      params: { page: randomPage, limit: 10 }
+      params: { page: randomPage, limit: 20 }
     });
     let jokes = response.data.results.map(jokeObj => ({
       ...jokeObj,
